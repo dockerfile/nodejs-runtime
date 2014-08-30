@@ -46,7 +46,7 @@ When building your application docker image, `ONBUILD` triggers install NPM modu
     docker build -t="app" .
 ```
 
-* **Step 3**: Run application by mapping port 3000:
+* **Step 3**: Run application by mapping port `3000`:
 
 ```sh
     APP=$(docker run -d -p 3000 app)
