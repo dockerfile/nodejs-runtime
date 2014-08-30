@@ -19,4 +19,4 @@ WORKDIR /app
 CMD ["npm", "start"]
 
 # Expose ports.
-EXPOSE 3000
+EXPOSE 8080
