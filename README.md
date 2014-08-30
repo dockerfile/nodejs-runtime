@@ -10,7 +10,7 @@ It can automatically bundle a `Node.js` application with its dependencies and se
 This project heavily borrowed code from Google's [google/nodejs-runtime](https://registry.hub.docker.com/u/google/nodejs-runtime/) Docker image.
 
 
-### Dependencies
+### Base Docker Image
 
 * [dockerfile/nodejs](http://dockerfile.github.io/#/nodejs)
 
