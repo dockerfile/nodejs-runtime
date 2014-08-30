@@ -30,7 +30,7 @@ This image assumes that your application:
 
 * has a file named [package.json](https://www.npmjs.org/doc/json.html) listing its dependencies.
 * has a file named `server.js` as the entrypoint script or define in package.json the attribute: `"scripts": {"start": "node <entrypoint_script_js>"}`
-* listens on port `3000`
+* listens on port `8080`
 
 When building your application docker image, `ONBUILD` triggers install NPM module dependencies of your application using `npm install`.
 
@@ -46,10 +46,10 @@ When building your application docker image, `ONBUILD` triggers install NPM modu
     docker build -t="app" .
 ```
 
-* **Step 3**: Run application by mapping port `3000`:
+* **Step 3**: Run application by mapping port `8080`:
 
 ```sh
-    APP=$(docker run -d -p 3000 app)
-    PORT=$(docker port $APP 3000 | awk -F: '{print $2}')
+    APP=$(docker run -d -p 8080 app)
+    PORT=$(docker port $APP 8080 | awk -F: '{print $2}')
     echo "Open http://localhost:$PORT/"
 ```
